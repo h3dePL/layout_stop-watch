@@ -3,9 +3,42 @@ body {
 }
 
 .stopwatch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 80px;
   height: 80px;
   background-color: #eee;
   border-radius: 50%;
   margin: 20px auto;
 }
+
+.stopwatch__seconds {
+  width: 1.5px;
+  height: 38px;
+  background-color: #0700ff;
+  animation: move 60s linear infinite;
+}
+
+.stopwatch__circle {
+  width: 10px;
+  height: 10px;
+  background-color: #f6a603;
+  border-radius: 50%;
+  border: 1px solid #f6a603;
+}
+
+@keyframes move {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// div {
+//   height: 100px; width: 100px;
+//   transform-origin: 50px 50px;
+//   transform: rotate(45deg);
+// }
