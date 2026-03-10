@@ -37,7 +37,7 @@ body {
   background-color: #0700ff;
   transform-origin: center bottom;
   z-index: 1;
-  animation: move 60min linear infinite;
+  animation: move 3600s steps(60, end) infinite;
 }
 
 .stopwatch__circle {
