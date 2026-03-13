@@ -1,3 +1,8 @@
+$color-black: #000;
+$color-seconds-hand: #2c8000;
+$color-minutes-hand: #0700ff;
+$color-center-circle: #f6a603;
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -7,7 +12,6 @@ body {
 }
 
 .stopwatch {
-  box-sizing: content-box;
   position: relative;
   display: flex;
   justify-content: center;
@@ -15,7 +19,7 @@ body {
   width: 80vmin;
   height: 80vmin;
   border-radius: 50%;
-  border: 1vmin dotted #000;
+  border: 1vmin dotted $color-black;
 }
 
 .stopwatch__seconds {
@@ -25,7 +29,7 @@ body {
   width: 1.5vmin;
   height: 38vmin;
   margin-left: -0.75vmin;
-  background-color: #2c8000;
+  background-color: $color-seconds-hand;
   transform-origin: center bottom;
   z-index: 2;
   animation: move 60s linear infinite;
@@ -38,7 +42,7 @@ body {
   width: 3vmin;
   height: 20vmin;
   margin-left: -1.5vmin;
-  background-color: #0700ff;
+  background-color: $color-minutes-hand;
   transform-origin: center bottom;
   z-index: 1;
   animation: move 3600s steps(60, end) infinite;
@@ -58,7 +62,7 @@ body {
   top: 50%;
   width: 5vmin;
   height: 5vmin;
-  background-color: #f6a603;
+  background-color: $color-center-circle;
   border-radius: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
