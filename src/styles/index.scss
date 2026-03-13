@@ -7,6 +7,7 @@ body {
 }
 
 .stopwatch {
+  box-sizing: content-box;
   position: relative;
   display: flex;
   justify-content: center;
@@ -41,6 +42,14 @@ body {
   transform-origin: center bottom;
   z-index: 1;
   animation: move 3600s steps(60, end) infinite;
+}
+
+.stopwatch--speed-up .stopwatch__seconds {
+  animation-duration: 10s;
+}
+
+.stopwatch--speed-up .stopwatch__minutes {
+  animation-duration: 600s;
 }
 
 .stopwatch__circle {
